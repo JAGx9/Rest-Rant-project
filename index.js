@@ -11,6 +11,10 @@ app.use('/places', require('./controllers/places'))
 app.get('/', (req, res) => {
     res.render('home')
 })
+
+
+
+
 //WildCard 
 app.get('*', (req, res) => {
     res.render('error404')

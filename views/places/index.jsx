@@ -11,7 +11,7 @@ function index (data){
         )
     })
     return (
-        <Def>
+        <Def>git
             <main>
                 <h1>PLACES INDEX PAGE</h1>
                 {placesFormatted}

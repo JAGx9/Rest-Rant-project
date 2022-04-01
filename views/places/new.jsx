@@ -7,23 +7,23 @@ function new_form () {
             <main>
                 <h1>Add a New Place</h1>
                 <form method='POST' action="/places">
-                    <div>
+                    <div className='form-groups'>
                         <label htmlFor="name">Place Name</label>
                         <input className='form-control' id='name' name='name' required />
                     </div>
-                    <div>
+                    <div className='form-groups'>
                         <label htmlFor="pic">Place Picture</label>
                         <input className='form-control' type='url' id='pic' name='pic' />
                     </div>
-                    <div>
+                    <div className='form-groups'>
                         <label htmlFor="city">City</label>
                         <input className='form-control' id='city' name='city' />
                     </div>
-                    <div>
+                    <div className='form-groups'>
                         <label htmlFor="state">State</label>
                         <input className='form-control' id='state' name='state' />
                     </div>
-                    <div>
+                    <div className='form-groups'>
                         <label htmlFor="cuisines">Cuisines</label>
                         <input className='form-control' id='cuisines' name='cuisines' required />
                     </div>

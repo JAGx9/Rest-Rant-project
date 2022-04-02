@@ -36,14 +36,38 @@ router.get('/:id', (req, res) => {
     res.render('error404')
   }
   else {
-    res.render('places/show', {place: places[id]})
+    res.render('places/show', {place: places[id], id})
   }
 });
 
+
+
 router.get('/:id/edit', (req, res)=> {
-  let myId = req.params.id;
-  res.send(`Edit page for ${myId}`)
+  let id = Number(req.param.id)
+  if (isNaN(id)) {
+    res.render('error404')
+  }
+  else if (!places[id]){
+    res.render('error404')
+  }
+  else {
+    res.render('places/edit', {place: places[id]})
+  }
 });
+
+router.delete('/:id', (req, res) => {
+  let id = Number(req.params.id)
+  if (isNaN(id)) {
+    res.render('error404')
+  }
+  else if (!places[id]) {
+    res.render('error404')
+  }
+  else {
+    places.splice(id, 1)
+    res.redirect('/places')
+  }
+})
 
 
 module.exports = router;
